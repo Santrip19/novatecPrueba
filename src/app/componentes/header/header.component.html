@@ -1,0 +1,93 @@
+<div class="header">
+    <div class="movil">
+        <div>
+            <button (click)="menu()">
+                <img
+                    src="./assets/svg/icon_menu.svg"
+                    alt="menu"
+                >
+            </button>
+            
+            
+                <img
+                    class="logo-Bank-Inc"
+                    src="../../../assets/svg/Logo-Bank-Inc.svg"
+                    alt="logo"
+                >
+            <div class="carrito-contenedor" (click)="irAlCarrito()">
+            
+                <img
+                    src="./assets/svg/icon_shopping_cart.svg"
+                    alt="logo"
+                >
+                <span class="counter-movil">{{contador}}</span>
+            
+            </div>
+        </div>
+
+        <div
+            [class.active]="verMenu"
+            class="slide-menu"
+        >
+            <button
+                (click)="menu()"
+                class="cerrar-menu"
+            >
+                <img
+                    src="../../../assets/images/cruzar.png"
+                    alt=""
+                >
+            </button>
+
+            <div class="container-opciones">
+                <div class="opcion-movil">
+                    Todos
+                </div>
+
+                <div
+                    class="opcion-movil"
+                    *ngFor="let categoria of categorias"
+                    
+                >
+                    {{categoria}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide-mobile">
+        <div>
+            <nav>
+                <div class="logo">
+                    <img
+                        class="logo-Bank-Inc"
+                        src="../../../assets/svg/Logo-Bank-Inc.svg"
+                        alt="logo"
+                    >
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="">Todos</a>
+                    </li>
+
+                    <li class="categoria-web" *ngFor="let categoria of categorias"
+                    >
+                        {{categoria}}
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="info">
+                <div class="carrito-contenedor" (click)="irAlCarrito()">
+                    <img
+                        src="./assets/svg/icon_shopping_cart.svg"
+                        alt="logo"
+                    >
+
+                    <span class="counter">{{contador}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

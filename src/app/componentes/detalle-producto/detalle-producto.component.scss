@@ -1,0 +1,54 @@
+@import '../../../_variables';
+.container-detalle{
+    overflow-x: hidden;
+}
+.cerrar-menu{
+    top: 5em;
+  }
+  .imagen-producto-detalle{
+    display: block;
+    margin: auto;
+    max-height: 50vh;
+    width: auto;
+    margin-top: 4em;
+    
+  }
+  .detalles-producto{
+    padding: 20px;
+  }
+  .nombre-producto{
+    font-size: 40px;
+    margin-top: 10px;
+    text-transform: capitalize;
+  }
+  .precio{
+    font-size: 20px;
+    color: $secondary-color;
+    margin: 10px 0px;
+  }
+  .container-botones{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .btn-eliminar{
+        background-color: $danger-color;
+        color: white;
+        border-radius: 12px;
+        padding: 10px 40px;
+        cursor: pointer;
+    }
+    .btn-agregar{
+        background-color: $success-color;
+        color: white;
+        border-radius: 12px;
+        padding: 10px 40px;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    
+  }
+
+  button:disabled{
+    opacity: 0.3;
+  }

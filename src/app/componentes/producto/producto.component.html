@@ -1,0 +1,25 @@
+
+<div class="card">
+
+<img class="imagen"
+    (click)="verDetalle()"
+    width="100"
+    [src]="producto.images[0]"
+    alt=""
+>
+<div class="ver-detalle" (click)="verDetalle()">
+    ver detalle </div>
+
+<p>{{producto.title | titlecase }}</p>
+<h3>
+    Precio : ${{producto.price |currency:' ':'symbol':'3.0'}}
+</h3><br>
+
+
+<div class="menu-container">
+   <button class="menu-button" (click)="abrirMenuAgregar()">Opción</button>
+    <ul class="menu" [ngClass]="{ 'open': isMenuOpen }">
+       <li class="menu-item" (click)="agregarAlCarrito()" >Agregar</li>
+     </ul>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container-detalle">
+    <div
+        (click)="atras()"
+        class="cerrar-menu"
+    >
+        <img
+            src="../../../assets/images/cruzar.png"
+            alt="cerrar"
+        >
+    </div>
+
+    <img
+        class="imagen-producto-detalle"
+        [src]="producto.images[0]"
+        alt=""
+    >
+    <ngx-spinner></ngx-spinner>
+    <div class="detalles-producto">
+        <h1 class="nombre-producto">{{producto.title}}</h1>
+
+        <h4 class="precio">
+            Precio : ${{producto.price |currency:' ':'symbol':'3.0'}}
+        </h4>
+
+        <p>
+            Descripcion:
+
+            <br>
+            {{producto.description}}
+        </p>
+
+        <div class="container-botones">
+            <div class="btn-agregar" (click)="agregarProducto()">Agregar</div>
+
+            <button [disabled]="!productoAgregado" class="btn-eliminar" (click)="eliminarProducto()">Eliminar</button>
+        </div>
+    </div>
+</div>

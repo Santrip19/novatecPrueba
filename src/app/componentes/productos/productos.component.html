@@ -1,0 +1,17 @@
+
+
+<div class="input-container" >
+    <input [formControl]="buscador" class="searchbar" type="text" placeholder="Buscar producto">
+    <img src="../../../assets/svg/lupa.svg" alt="Logo" class="logo">
+</div>
+<div class="carrusel-continer">
+    <app-carrusel [productos]="productos" ></app-carrusel>
+</div>
+<ngx-spinner></ngx-spinner>
+<div class="grid-productos">
+    <app-producto
+        [producto]="producto"
+        *ngFor="let producto of productos | buscador : txtBuscar " 
+        (agregarProducto)="productoAgregado(producto)"
+    ></app-producto>
+</div>

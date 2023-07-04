@@ -1,0 +1,18 @@
+.slide-principal{
+   height: auto;
+   margin-bottom: 15px;
+   .slickItem{
+    
+    max-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    img{
+        max-height: 30vh;
+        border-radius: 20px;
+    }
+    p{
+        text-align: center;
+    }
+   }
+}

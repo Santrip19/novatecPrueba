@@ -1,0 +1,35 @@
+
+<div class="carrito-content">
+    <div *ngIf="carrito.length > 0; else carritoVcio ">
+        <div *ngFor="let producto of carrito">
+            <div class="product-card">
+                <img class="product-image" [src]="producto.images[0]" alt="Imagen del producto">
+                <div class="product-info">
+                    <h2 class="product-title">{{producto.title |titlecase}}</h2>
+                    <p class="product-description">Descripción: {{producto.description}} <br> <br>Cantidad: {{producto.cantidad}} </p>
+                    <p class="product-price">Precio : ${{producto.price |currency:' ':'symbol':'3.0'}}
+                        <br> Total : ${{producto.total |currency:' ':'symbol':'3.0'}}
+                    </p>
+                    <button class="product-button" (click)="eliminarProducto(producto)">Eliminar Producto</button>
+                 </div>
+             </div>
+        </div>
+    </div>
+    <ng-template #carritoVcio class="contenedor-vacio">
+        <div class="carrito-vacio" (click)="irAProductos()">
+            <img src="../../../assets/svg/Logo-Bank-Inc.svg" alt="">
+            <span>No se a agregado ningun producto</span>
+            <div class="btn-agregar">Agregar Productos</div>
+        </div>
+    </ng-template>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="total-carrito" >
+                <p>Total : ${{storeService.total |currency:' ':'symbol':'3.0'}} </p>  
+            </div>
+            <div>
+                <button class="btn-excel" (click)="exportToExcel()">Exportar Excel</button>
+            </div>
+        </div>
+     </footer>
+</div>

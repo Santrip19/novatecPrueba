@@ -1,0 +1,18 @@
+<div
+  class="slide-principal"
+  slickContainer="slickContainer"
+  id="your-slide-container"
+  [slickConfig]="config"
+>
+  <div
+    *ngFor="let producto of productos"
+    class="slickItem"
+    slickItem="slickItem"
+  >
+    <img class="img"
+      id="your-slide"
+      [src]="producto.images[0]"
+    >
+    <p>{{producto.title}} </p>
+  </div>
+</div>
