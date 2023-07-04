@@ -43,6 +43,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/carrito'])
   }
 
+  irCategoria(){
+    this.menu()
+    this.router.navigate(['/'])
+  }
+
   menu(){
     this.verMenu = !this.verMenu
   }

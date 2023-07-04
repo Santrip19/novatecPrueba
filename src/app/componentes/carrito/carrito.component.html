@@ -1,7 +1,7 @@
 
 <div class="carrito-content">
     <div *ngIf="carrito.length > 0; else carritoVcio ">
-        <div *ngFor="let producto of carrito">
+        <div class="container-productos" *ngFor="let producto of carrito">
             <div class="product-card">
                 <img class="product-image" [src]="producto.images[0]" alt="Imagen del producto">
                 <div class="product-info">
@@ -17,7 +17,7 @@
     </div>
     <ng-template #carritoVcio class="contenedor-vacio">
         <div class="carrito-vacio" (click)="irAProductos()">
-            <img src="../../../assets/svg/Logo-Bank-Inc.svg" alt="">
+            <img src="../../../assets/svg/Logo-Bank-Inc-azul.svg" alt="">
             <span>No se a agregado ningun producto</span>
             <div class="btn-agregar">Agregar Productos</div>
         </div>

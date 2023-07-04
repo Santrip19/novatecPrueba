@@ -39,7 +39,7 @@
                 >
             </button>
 
-            <div class="container-opciones">
+            <div class="container-opciones" (click)="irCategoria()">
                 <div class="opcion-movil">
                     Todos
                 </div>
@@ -66,9 +66,9 @@
                     >
                 </div>
 
-                <ul>
-                    <li>
-                        <a href="">Todos</a>
+                <ul (click)="irCategoria()">
+                    <li class="categoria-web">
+                        Todos
                     </li>
 
                     <li class="categoria-web" *ngFor="let categoria of categorias"

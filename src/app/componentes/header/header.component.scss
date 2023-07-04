@@ -137,5 +137,9 @@
   }
   
   .categoria-web{
-    margin-left: 7px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  :hover.categoria-web{
+    color: white;
   }
